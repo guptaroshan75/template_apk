@@ -1,23 +1,20 @@
-import { View, Text, StyleSheet } from 'react-native';
-import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import React, { useEffect } from 'react';
+import StackNavigator from './Src/Screens/StackNavigator';
+import SplashScreen from 'react-native-splash-screen';
 
 const App = () => {
+    useEffect(() => {
+        setTimeout(() => {
+            SplashScreen.hide();
+        }, 1000);
+    });
+
     return (
-        <View style={styles.container}>
-            <Text style={styles.text}>Hello Test World</Text>
-        </View>
+        <NavigationContainer>
+            <StackNavigator />
+        </NavigationContainer>
     );
 };
 
 export default App;
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-    text: {
-        fontSize: 23,
-    },
-});
