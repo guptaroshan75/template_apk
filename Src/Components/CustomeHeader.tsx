@@ -14,7 +14,7 @@ const CustomeHeader: React.FC<CustomeHeader> = (props) => {
         <View style={styles.container}>
             <TouchableWithoutFeedback onPress={() => props.navigation.goBack()}>
                 <View style={styles.backbtn}>
-                    <Image source={require('../Image/arrow.png')} style={styles.back} />
+                    <Image source={require('../image/arrow.png')} style={styles.back} />
                 </View>
             </TouchableWithoutFeedback>
             <Text style={styles.mainContent}> {props.lable} </Text>

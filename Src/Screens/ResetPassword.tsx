@@ -1,10 +1,9 @@
 import { View, Text, TouchableOpacity, ScrollView } from 'react-native'
 import React, { FC, useState } from 'react'
-import ResetPasswordStyle from '../Css/ResetPasswordStyle'
-import CustomeHeader from '../Components/CustomeHeader'
-import CustomeInput from '../Components/CustomeInput'
-import CustomeAlert from '../Components/CustomeAlert'
-import CustomeModal from '../Components/CustomeModal'
+import ResetPasswordStyle from '../css/ResetPasswordStyle'
+import CustomeHeader from '../components/CustomeHeader'
+import CustomeInput from '../components/CustomeInput'
+import CustomeAlert from '../components/CustomeAlert'
 
 const ResetPassword: FC<{ navigation: any }> = ({ navigation }) => {
     const [userInfo, setUserInfo] = useState({
@@ -82,7 +81,6 @@ const ResetPassword: FC<{ navigation: any }> = ({ navigation }) => {
                     closeModel={closeModel}
                 />
 
-                <CustomeModal navigation={navigation} setIsVisible={setIsVisible} isVisible={isVisible} />
             </View>
 
             <TouchableOpacity style={ResetPasswordStyle.resetbtn}

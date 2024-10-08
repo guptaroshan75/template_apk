@@ -1,8 +1,8 @@
 import { View, Text, TextInput, TouchableOpacity } from 'react-native';
 import React, { FC, useRef } from 'react';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import VerificationStyle from '../Css/VerificationStyle';
-import CustomeHeader from '../Components/CustomeHeader';
+import VerificationStyle from '../css/VerificationStyle';
+import CustomeHeader from '../components/CustomeHeader';
 
 const EmailVerification: FC<{ navigation: any }> = ({ navigation }) => {
     const inputRefs = useRef<Array<TextInput | null>>([]);
@@ -14,7 +14,7 @@ const EmailVerification: FC<{ navigation: any }> = ({ navigation }) => {
     };
 
     return (
-        <View style={{flex: 1}}>
+        <View style={{ flex: 1 }}>
             <View style={VerificationStyle.container}>
                 <CustomeHeader lable={'OTP'} navigation={navigation} />
                 <Text style={VerificationStyle.title}>Email verification</Text>

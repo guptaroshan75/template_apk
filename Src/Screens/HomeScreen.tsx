@@ -1,7 +1,7 @@
 import { View, Text, Image } from 'react-native'
 import { TouchableOpacity, StatusBar } from 'react-native'
 import React, { FC } from 'react'
-import HomeScreenStyle from '../Css/HomeScreenStyle';
+import HomeScreenStyle from '../css/HomeScreenStyle';
 
 const HomeScreen: FC<{ navigation: any }> = () => {
     const handleLogout = async () => {
@@ -10,11 +10,11 @@ const HomeScreen: FC<{ navigation: any }> = () => {
 
     return (
         <View style={{ flex: 1 }}>
-            <Image source={require('../Image/onboarding.png')} style={HomeScreenStyle.image} />
+            <Image source={require('../image/onboarding.png')} style={HomeScreenStyle.image} />
 
             <View style={HomeScreenStyle.container}>
                 <View style={HomeScreenStyle.border} />
-                <Image source={require('../Image/loginSuccess.png')} style={HomeScreenStyle.img} />
+                <Image source={require('../image/loginSuccess.png')} style={HomeScreenStyle.img} />
                 <Text style={HomeScreenStyle.text}>Login Successful</Text>
                 <Text style={HomeScreenStyle.subtitle}>
                     An event has been created and the invite has been sent to you on mail.

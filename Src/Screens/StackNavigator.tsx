@@ -2,7 +2,7 @@ import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Login from './Login';
 import { StyleSheet, View } from 'react-native';
-import OnboardingSwiper from '../Swiper/OnboardingSwiper';
+import OnboardingSwiper from '../swiper/OnboardingSwiper';
 import SignUp from './SignUp';
 import EmailVerification from './EmailVerification';
 import HomeScreen from './HomeScreen';

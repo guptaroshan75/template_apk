@@ -1,18 +1,25 @@
 import { View, Text, Image, TextInput, SafeAreaView } from 'react-native';
 import { TouchableOpacity, StatusBar } from 'react-native';
 import React, { FC, useState } from 'react';
-import SignUpStyle from '../Css/SignUpStyle';
-import CustomeInput from '../Components/CustomeInput';
+import SignUpStyle from '../css/SignUpStyle';
+import CustomeInput from '../components/CustomeInput';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import Congratulations from '../components/Congratulations';
 
-const SignUp: FC<{ navigation: any }> = () => {
+const SignUp: FC<{ navigation: any }> = ({ navigation }) => {
     const [userInfo, setUserInfo] = useState({
         email: '', username: '', password: '',
     });
 
+    const [isVisible, setIsVisible] = useState(false);
+
+    const handleSignUp = () => {
+        setIsVisible(true);
+    };
+
     return (
         <SafeAreaView style={SignUpStyle.maincontainer}>
-            <Image source={require('../Image/variety.png')} style={SignUpStyle.image} />
+            <Image source={require('../image/variety.png')} style={SignUpStyle.image} />
 
             <View style={SignUpStyle.container}>
                 <View style={SignUpStyle.mainHeader}>
@@ -51,12 +58,14 @@ const SignUp: FC<{ navigation: any }> = () => {
                     and <Text style={SignUpStyle.span}>condition</Text>
                 </Text>
 
-                <TouchableOpacity style={SignUpStyle.signUp} activeOpacity={1} >
+                <TouchableOpacity style={SignUpStyle.signUp} activeOpacity={1} onPress={handleSignUp}>
                     <Text style={SignUpStyle.signText}>Create an account</Text>
                 </TouchableOpacity>
             </View>
 
             <StatusBar translucent backgroundColor={'transparent'} barStyle={'light-content'} />
+
+            <Congratulations isVisible={isVisible} navigation={navigation} />
         </SafeAreaView>
     );
 };

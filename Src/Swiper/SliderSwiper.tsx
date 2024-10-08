@@ -33,7 +33,7 @@ const SliderSwiper: FC<SliderSwiperProps> = ({ item, scrollX, index, scrollToNex
         <SafeAreaView style={styles.main}>
             {index < 2 && (
                 <TouchableOpacity onPress={scrollToPre}>
-                    <Image source={require('../Image/arrow.png')} style={styles.back} />
+                    <Image source={require('../image/arrow.png')} style={styles.back} />
                 </TouchableOpacity>
             )}
 

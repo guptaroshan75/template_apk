@@ -3,102 +3,76 @@ import { responsiveHeight, responsiveWidth } from 'react-native-responsive-dimen
 import { responsiveFontSize } from 'react-native-responsive-dimensions';
 
 const LoginStyle = StyleSheet.create({
+    maincontainer: {
+        flex: 1,
+    },
+
     container: {
-        width: responsiveWidth(87),
-        alignSelf: 'center',
-        marginTop: responsiveHeight(10),
-    },
-
-    title: {
-        fontSize: responsiveFontSize(5),
-        fontWeight: '600',
-        lineHeight: 40,
-        color: '#101010',
-        fontFamily: 'Inter',
-    },
-
-    description: {
-        fontSize: responsiveFontSize(2),
-        fontWeight: '500',
-        lineHeight: 30,
-        color: '#878787',
-        fontFamily: 'Inter',
-    },
-
-    inputField: {
-        marginTop: responsiveHeight(3),
         width: '100%',
+        height: '48%',
+        backgroundColor: '#FAFEFC',
+        position: 'absolute',
+        bottom: 0,
+        borderTopLeftRadius: responsiveHeight(3.8),
+        borderTopRightRadius: responsiveHeight(3.8),
     },
 
-    label: {
-        fontSize: responsiveFontSize(2),
-        fontWeight: '500',
-        color: '#101010',
-        fontFamily: 'Inter',
-        marginBottom: responsiveHeight(1),
-    },
-
-    emailInput: {
-        borderWidth: 1,
-        borderColor: '#D6D6D6',
-        borderRadius: 10,
-        paddingLeft: responsiveWidth(5),
-    },
-
-    forgotButton: {
-        textAlign: 'right',
-        marginTop: responsiveHeight(3),
-        color: '#FE8C00',
-        fontWeight: '500',
-    },
-
-    loginButton: {
-        marginTop: responsiveHeight(3),
-        backgroundColor: '#FE8C00',
-        padding: 15,
-        borderRadius: 50,
-    },
-
-    loginText: {
-        color: 'white',
-        textAlign: 'center',
-        fontWeight: '600',
-        fontSize: responsiveFontSize(2),
-    },
-
-    separatorContainer: {
+    mainHeader: {
+        display: 'flex',
         flexDirection: 'row',
         alignItems: 'center',
+        justifyContent: 'space-between',
+        width: responsiveWidth(88),
+        marginRight: 'auto',
+        marginLeft: 'auto',
         marginTop: 20,
+        marginBottom: responsiveHeight(5),
     },
 
-    separatorLine: {
-        flex: 1,
-        height: 1,
-        backgroundColor: '#D6D6D6',
-    },
-
-    separatorText: {
-        paddingHorizontal: 10,
-        color: '#878787',
-        fontSize: 16,
-        fontWeight: 'normal',
+    heading: {
+        fontSize: responsiveFontSize(3),
+        fontWeight: '600',
+        color: '#000',
         textAlign: 'center',
+        paddingLeft: responsiveWidth(2.6),
     },
 
-    socialIcon: {
-        padding: responsiveWidth(5),
-        backgroundColor: 'white',
-        borderRadius: 20,
+    close_icon: {
         alignSelf: 'center',
-        borderWidth: 1,
-        marginVertical: responsiveHeight(5),
+        justifyContent: 'center',
     },
 
-    registerbtn: {
+    image: {
+        justifyContent: 'center',
+        resizeMode: 'contain',
+    },
+
+    subtitle: {
+        fontSize: responsiveFontSize(2.2),
+        fontWeight: '400',
+        color: '#E67F1E',
         textAlign: 'center',
-        color: 'black',
-        fontWeight: '500',
+        lineHeight: 24,
+        marginVertical: 10,
+        paddingHorizontal: responsiveWidth(14),
+    },
+
+    signInBtn: {
+        marginTop: responsiveHeight(1.6),
+        paddingVertical: responsiveHeight(2),
+        borderRadius: 50,
+        width: responsiveWidth(88),
+        alignSelf: 'center',
+        backgroundColor: '#FEC54B',
+    },
+
+    signInText: {
+        color: '#000',
+        textAlign: 'center',
+        fontWeight: '700',
+        fontSize: 16,
+        lineHeight: 24,
+        textTransform: 'uppercase',
     },
 });
 
