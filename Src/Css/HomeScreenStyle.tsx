@@ -3,6 +3,10 @@ import { responsiveHeight, responsiveWidth } from 'react-native-responsive-dimen
 import { responsiveFontSize } from 'react-native-responsive-dimensions';
 
 const HomeScreenStyle = StyleSheet.create({
+    mainView: {
+        flex: 1,
+    },
+
     container: {
         width: '100%',
         height: '60%',

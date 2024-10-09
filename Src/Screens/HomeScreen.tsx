@@ -1,6 +1,6 @@
-import { View, Text, Image } from 'react-native'
-import { TouchableOpacity, StatusBar } from 'react-native'
-import React, { FC } from 'react'
+import { View, Text, Image } from 'react-native';
+import { TouchableOpacity, StatusBar } from 'react-native';
+import React, { FC } from 'react';
 import HomeScreenStyle from '../css/HomeScreenStyle';
 
 const HomeScreen: FC<{ navigation: any }> = () => {
@@ -9,7 +9,7 @@ const HomeScreen: FC<{ navigation: any }> = () => {
     };
 
     return (
-        <View style={{ flex: 1 }}>
+        <View style={HomeScreenStyle.mainView}>
             <Image source={require('../image/onboarding.png')} style={HomeScreenStyle.image} />
 
             <View style={HomeScreenStyle.container}>

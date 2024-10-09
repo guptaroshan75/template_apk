@@ -4,9 +4,7 @@ import Login from './Login';
 import { StyleSheet, View } from 'react-native';
 import OnboardingSwiper from '../swiper/OnboardingSwiper';
 import SignUp from './SignUp';
-import EmailVerification from './EmailVerification';
-import HomeScreen from './HomeScreen';
-import ResetPassword from './ResetPassword';
+import BottomNavigator from '../components/BottomNavigator';
 
 const Stack = createNativeStackNavigator();
 
@@ -16,10 +14,8 @@ const StackNavigator = () => {
             <Stack.Navigator screenOptions={{ headerShown: false }}>
                 <Stack.Screen name="OnboardingSwiper" component={OnboardingSwiper} />
                 <Stack.Screen name="Login" component={Login} />
-                <Stack.Screen name="HomeScreen" component={HomeScreen} />
                 <Stack.Screen name="SignUp" component={SignUp} />
-                <Stack.Screen name="EmailVerification" component={EmailVerification} />
-                <Stack.Screen name="ResetPassword" component={ResetPassword} />
+                <Stack.Screen name="BottomNavigator" component={BottomNavigator} />
             </Stack.Navigator>
         </View>
     );

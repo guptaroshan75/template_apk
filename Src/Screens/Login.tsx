@@ -4,11 +4,21 @@ import React, { FC, useState } from 'react';
 import LoginStyle from '../css/LoginStyle';
 import CustomeInput from '../components/CustomeInput';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import { CommonActions } from '@react-navigation/native';
 
-const Login: FC<{ navigation: any }> = () => {
+const Login: FC<{ navigation: any }> = ({ navigation }) => {
     const [userInfo, setUserInfo] = useState({
         email: '', password: '',
     });
+
+    const handleLogin = () => {
+        const resetAction = CommonActions.reset({
+            index: 0,
+            routes: [{ name: 'BottomNavigator' }],
+        });
+        navigation.dispatch(resetAction);
+    };
+
     return (
         <SafeAreaView style={LoginStyle.maincontainer}>
             <Image source={require('../image/login.png')} style={LoginStyle.image} />
@@ -33,7 +43,7 @@ const Login: FC<{ navigation: any }> = () => {
                     Forgot Password?
                 </Text>
 
-                <TouchableOpacity style={LoginStyle.signInBtn} activeOpacity={1}>
+                <TouchableOpacity style={LoginStyle.signInBtn} activeOpacity={1} onPress={handleLogin}>
                     <Text style={LoginStyle.signInText}>Sign In</Text>
                 </TouchableOpacity>
             </View>
