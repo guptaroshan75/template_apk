@@ -77,7 +77,7 @@ import React from 'react';
 import { BottomTabBarProps } from '@react-navigation/bottom-tabs';
 
 const tabItems = [
-    { name: 'HomeScreen', label: 'Home', image: require('../image/home.png') },
+    { name: 'Home', label: 'Home', image: require('../image/home.png') },
     { name: 'BagScreen', label: 'Bag', image: require('../image/bag.png') },
     { name: 'CategoryScreen', label: 'Category', image: require('../image/category.png') },
     { name: 'UserScreen', label: 'User', image: require('../image/user.png') },
@@ -122,6 +122,9 @@ const CustomeBottom: React.FC<BottomTabBarProps> = ({ state, navigation }) => {
                                 </Text>
                             )}
                         </View>
+                        {isFocused && (
+                            <Text style={styles.dot}> </Text>
+                        )}
                     </TouchableOpacity>
                 );
             })}
@@ -141,7 +144,6 @@ const styles = StyleSheet.create({
     },
 
     mainBtn: {
-        width: '25%',
         alignItems: 'center',
         justifyContent: 'center',
     },
@@ -149,7 +151,6 @@ const styles = StyleSheet.create({
     img: {
         width: 24,
         height: 24,
-        // resizeMode: 'contain',
     },
 
     iconLabelContainer: {
@@ -164,9 +165,12 @@ const styles = StyleSheet.create({
     },
 
     activeBackground: {
-        backgroundColor: '#ffaa00',
-        padding: 10,
-        borderRadius: 20,
+        width: 105,
+        backgroundColor: '#F4F1FD',
+        alignItems: 'center',
+        justifyContent: 'center',
+        paddingVertical: 10,
+        borderRadius: 44,
     },
 
     label: {
@@ -179,11 +183,19 @@ const styles = StyleSheet.create({
     },
 
     focusedLabel: {
-        color: '#fff',
+        color: '#E67F1E',
         fontWeight: 'bold',
     },
 
     imgFocused: {
-        tintColor: '#fff',
+        tintColor: '#E67F1E',
+    },
+
+    dot: {
+        width: 6,
+        height: 6,
+        borderRadius: 10,
+        marginTop: 5,
+        backgroundColor: '#E67F1E',
     },
 });

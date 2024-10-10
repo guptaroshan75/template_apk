@@ -37,23 +37,24 @@
 
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import React from 'react';
-import HomeScreen from '../screens/HomeScreen';
 import CustomeBottom from '../components/CustomeBottom';
 import BagScreen from '../screens/BagScreen';
 import CategoryScreen from '../screens/CategoryScreen';
 import UserScreen from '../screens/UserScreen';
+import DashBoard from '../screens/DashBoard';
 
 const Bottom = createBottomTabNavigator();
 
 const BottomNavigator: React.FC = () => {
+    const screenOptions = {
+        headerShown: false,
+    };
+
+    const renderCustomBottom = (props: any) => <CustomeBottom {...props} />;
+
     return (
-        <Bottom.Navigator
-            screenOptions={{
-                headerShown: false,
-            }}
-            tabBar={(props) => <CustomeBottom {...props} />}
-        >
-            <Bottom.Screen name="HomeScreen" component={HomeScreen} />
+        <Bottom.Navigator screenOptions={screenOptions} tabBar={renderCustomBottom}>
+            <Bottom.Screen name="Home" component={DashBoard} />
             <Bottom.Screen name="BagScreen" component={BagScreen} />
             <Bottom.Screen name="CategoryScreen" component={CategoryScreen} />
             <Bottom.Screen name="UserScreen" component={UserScreen} />

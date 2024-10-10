@@ -14,7 +14,7 @@ const Login: FC<{ navigation: any }> = ({ navigation }) => {
     const handleLogin = () => {
         const resetAction = CommonActions.reset({
             index: 0,
-            routes: [{ name: 'BottomNavigator' }],
+            routes: [{ name: 'DrawerNavigator' }],
         });
         navigation.dispatch(resetAction);
     };

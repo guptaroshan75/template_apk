@@ -1,9 +1,16 @@
-import { View, Text } from "react-native";
-import React from "react";
+import { View, Text } from 'react-native';
+import React, { FC } from 'react';
+import CustomeDrawerHeader from '../components/CustomeDrawerHeader';
 
-const BagScreen = () => {
+interface BagScreen {
+  navigation: any
+}
+
+const BagScreen: FC<BagScreen> = ({ navigation }) => {
   return (
     <View>
+      <CustomeDrawerHeader label={'BagScreen'} navigation={navigation} />
+
       <Text>BagScreen</Text>
     </View>
   );

@@ -4,7 +4,7 @@ import Login from './Login';
 import { StyleSheet, View } from 'react-native';
 import OnboardingSwiper from '../swiper/OnboardingSwiper';
 import SignUp from './SignUp';
-import BottomNavigator from '../components/BottomNavigator';
+import DrawerNavigator from '../components/DrawerNavigator';
 
 const Stack = createNativeStackNavigator();
 
@@ -15,7 +15,7 @@ const StackNavigator = () => {
                 <Stack.Screen name="OnboardingSwiper" component={OnboardingSwiper} />
                 <Stack.Screen name="Login" component={Login} />
                 <Stack.Screen name="SignUp" component={SignUp} />
-                <Stack.Screen name="BottomNavigator" component={BottomNavigator} />
+                <Stack.Screen name="DrawerNavigator" component={DrawerNavigator} />
             </Stack.Navigator>
         </View>
     );

@@ -14,7 +14,7 @@ const HomeScreen: FC<{ navigation: any }> = () => {
 
             <View style={HomeScreenStyle.container}>
                 <View style={HomeScreenStyle.border} />
-                <Image source={require('../image/loginSuccess.png')} style={HomeScreenStyle.img} />
+                <Image source={require('../image/login.png')} style={HomeScreenStyle.img} />
                 <Text style={HomeScreenStyle.text}>Login Successful</Text>
                 <Text style={HomeScreenStyle.subtitle}>
                     An event has been created and the invite has been sent to you on mail.

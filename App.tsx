@@ -1,8 +1,10 @@
+import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import React, { useEffect } from 'react';
 import StackNavigator from './src/screens/StackNavigator';
 import SplashScreen from 'react-native-splash-screen';
-// import CustomeBottom from './src/components/CustomeBottom';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { StyleSheet } from 'react-native';
 
 const App = () => {
     useEffect(() => {
@@ -13,10 +15,17 @@ const App = () => {
 
     return (
         <NavigationContainer>
-            <StackNavigator />
-            {/* <CustomeBottom /> */}
+            <GestureHandlerRootView style={styles.container}>
+                <StackNavigator />
+            </GestureHandlerRootView>
         </NavigationContainer>
     );
 };
 
 export default App;
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+    },
+});
